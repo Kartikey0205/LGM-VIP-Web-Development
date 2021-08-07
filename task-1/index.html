@@ -19,6 +19,11 @@
     />
     <title>Zippy</title>
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Parallax -->
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- JavaScript -->
+    <script src="js/parallax.js"></script>
   </head>
   <body>
     <!-- navbar section -->
@@ -49,23 +54,33 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">PROJECTS</a>
+              <a class="nav-link" aria-current="page" href="#zippyProject_id"
+                >PROJECTS</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">PRICING</a>
+              <a class="nav-link" aria-current="page" href="#zippyPrice_id"
+                >PRICING</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">TEAM</a>
+              <a class="nav-link" aria-current="page" href="#zippyTeam_id"
+                >TEAM</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">BLOG</a>
+              <a class="nav-link" aria-current="page" href="#zippyBlog_id"
+                >BLOG</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">CONTACT</a>
+              <a class="nav-link" aria-current="page" href="#zippyContact_id"
+                >CONTACT</a
+              >
             </li>
           </ul>
         </div>
@@ -152,10 +167,174 @@
     <!-- price section -->
     <!-- vedio carousel section -->
     <!-- team section -->
+    <section id="zippyTeam_id" class="zippyTeam mb-5">
+      <h2 class="text-center mt-4 mb-5">Zippy Team</h2>
+
+      <div class="row text-center">
+        <div class="zippyTeamImg col-lg-4 col-md-4 col-12 py-3">
+          <img
+            src="img/teamMem5.jpg"
+            alt=""
+            srcset=""
+            class="image"
+            style="width: 200px; height: 180px; border-radius: 50%"
+          />
+          <div class="middle">
+            <div class="text">
+              <i class="fab fa-twitter"> &nbsp;&nbsp; </i>
+              <i class="fab fa-google-plus-g"> &nbsp;&nbsp; </i>
+              <i class="fab fa-facebook"> &nbsp;&nbsp; </i>
+            </div>
+          </div>
+          <h5 style="font-weight: bold" class="text-center mt-2 mb-2">
+            JOHN DOE
+          </h5>
+          <span class="text-center text-muted">Senior Designer</span>
+        </div>
+        <div class="zippyTeamImg col-lg-4 col-md-4 col-12 py-3">
+          <img
+            src="img/teamMem2.jpg"
+            alt=""
+            srcset=""
+            style="width: 200px; height: 180px; border-radius: 50%"
+          />
+          <div class="middle">
+            <div class="text">
+              <i class="fab fa-twitter"> &nbsp;&nbsp; </i>
+              <i class="fab fa-google-plus-g"> &nbsp;&nbsp; </i>
+              <i class="fab fa-facebook"> &nbsp;&nbsp; </i>
+            </div>
+          </div>
+          <h5 style="font-weight: bold" class="text-center mt-2 mb-2">
+            CHRIS PHILIPS
+          </h5>
+          <span class="text-center text-muted">Marketing Maanager</span>
+        </div>
+        <div class="zippyTeamImg col-lg-4 col-md-4 col-12 py-3">
+          <img
+            src="img/teamMem6.jpg"
+            alt=""
+            srcset=""
+            style="width: 200px; height: 180px; border-radius: 50%"
+          />
+          <div class="middle">
+            <div class="text">
+              <i class="fab fa-twitter"> &nbsp;&nbsp; </i>
+              <i class="fab fa-google-plus-g"> &nbsp;&nbsp; </i>
+              <i class="fab fa-facebook"> &nbsp;&nbsp; </i>
+            </div>
+          </div>
+          <h5 style="font-weight: bold" class="text-center mt-2 mb-2">
+            SARA JOHNSON
+          </h5>
+          <span class="text-center text-muted">Creative Head</span>
+        </div>
+      </div>
+    </section>
+
     <!-- Life section -->
+
+    <section class="zippyLife py-5">
+      <h2 class="text-center mt-2 mb-1">Life In Zippy</h2>
+      <div class="container1">
+        <div class="mySlides">
+          <img src="img/life4.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <img src="img/life3.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <img src="img/life1.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides">
+          <img src="img/life2.jpg" style="width: 100%" />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <div class="row1 mt-3">
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="img/life4.jpg"
+              style="width: 100%"
+              onclick="currentSlide(1)"
+              alt="Life In Zippy"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="img/life3.jpg"
+              style="width: 100%"
+              onclick="currentSlide(2)"
+              alt="Life In Zippy"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="img/life1.jpg"
+              style="width: 100%"
+              onclick="currentSlide(3)"
+              alt="Life In Zippy"
+            />
+          </div>
+          <div class="column">
+            <img
+              class="demo cursor"
+              src="img/life2.jpg"
+              style="width: 100%"
+              onclick="currentSlide(4)"
+              alt="Life In Zippy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Newsletter sign up -->
+
+    <div
+      class="zippyNewsletter"
+      data-parallax="scroll"
+      data-image-src="img/slide3.jpg"
+    >
+      <h1
+        class="text-center py-5"
+        style="
+          color: rgb(0, 0, 0);
+          font-weight: bold;
+          text-shadow: 2px 2px 1px white;
+        "
+      >
+        Newsletter Sign Up
+      </h1>
+      <div class="newsLetterRow row align-items-center pb-5">
+        <div class="col-7 col-md-4 col-lg-5 py-3 px-3">
+          <input
+            class="form-input form-control"
+            type="email"
+            placeholder="abc@example.com"
+          />
+        </div>
+
+        <div class="col-7 col-md-3 col-lg-2">
+          <button class="blogBtn d-block btn">SignUp</button><br />
+          <button class="blogBtn d-block btn">SignIn</button><br />
+        </div>
+      </div>
+    </div>
+
     <!-- bblog section -->
-    <section class="zippyBlog mb-5">
+    <section id="zippyBlog_id" class="zippyBlog mb-5">
       <h2 class="text-center mt-4 mb-5">Blog</h2>
       <div class="row text-center">
         <div class="col-12 col-lg-4 col-md-6 blogImg mt-2 mb-2">
@@ -211,8 +390,9 @@
         </div>
       </div>
     </section>
+
     <!-- contact section -->
-    <section class="zippyContact">
+    <section id="zippyContact_id" class="zippyContact">
       <div class="row zippyForm">
         <div class="col-lg-6 col-md-12 col-12 mt-5">
           <iframe
@@ -311,6 +491,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
     <script src="js/app.js"></script>
   </body>
 </html>
