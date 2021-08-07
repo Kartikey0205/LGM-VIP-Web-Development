@@ -1,8 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  scroll-behavior: smooth;
+}
 .bg-dark-color {
   background-color: #21252900 !important;
 }
@@ -40,14 +44,13 @@
 }
 
 /* .zippyLinks {
-  display: block !important;
-  width: 60% !important;
-  margin: auto !important;
+  background-color: black;
 } */
 
 /* .carousel-inner {
   height: 100vh;
 } */
+
 /* head css */
 .head {
   position: absolute;
@@ -60,6 +63,168 @@
 
 .innerr-part {
   margin-bottom: 40px;
+}
+.zippyTeamImg img:hover {
+  cursor: pointer;
+}
+
+.zippyTeamImg {
+  position: relative;
+}
+
+.image {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.zippyTeamImg:hover .image {
+  opacity: 0.3;
+}
+
+.zippyTeamImg:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #7b04aa;
+  height: 180px;
+  width: 200px;
+  border-radius: 50%;
+  opacity: 0.5;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* font-size: 16px; */
+  /* padding: 16px 32px; */
+}
+
+.zippyTeam h2 {
+  font-weight: bold;
+}
+
+.zippyLife {
+  /* height: 400px; */
+  background-color: #d0d0d0a1;
+}
+.zippyLife h2 {
+  font-weight: bold;
+}
+.container1 {
+  position: relative;
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+.row1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* Newsletter Css */
+.blogBtn {
+  background-color: #f0cf0d;
+  outline: none;
+  width: 100%;
+  font-weight: bold;
+}
+
+.blogBtn:focus {
+  outline: none;
+}
+
+.blogBtn:hover {
+  background-color: #6f42c1;
+  color: white;
+  outline: none;
+  border: none;
+}
+.newsLetterRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* blog css */
@@ -156,7 +321,7 @@
 @media screen and (max-width: 760px) {
   .head {
     position: absolute;
-    top: 9%;
+    top: 15%;
     width: 70%;
     margin: 0px 0px 20px 1rem;
     z-index: 10000;
@@ -167,6 +332,10 @@
   .zippyMap {
     width: 200px;
     height: 300px;
+  }
+  .column {
+    float: left;
+    width: 4rem;
   }
 }
 
