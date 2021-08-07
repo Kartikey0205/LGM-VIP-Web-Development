@@ -64,6 +64,73 @@ body {
 .innerr-part {
   margin-bottom: 40px;
 }
+/* zippyWelcome */
+
+.wlcmImgUmbrella {
+  /* margin: 3px; */
+  /* padding: 35px; */
+  font-size: 10rem;
+}
+
+.wlcmImg {
+  background-color: #f0cf0d;
+  border-radius: 50%;
+  padding: 27px;
+  font-size: 40px;
+}
+
+.zippyWelcome h2 {
+  font-weight: bold;
+}
+
+.blogWelcome button {
+  background-color: #f0cf0d;
+  width: 50%;
+  outline: none;
+  font-weight: 500;
+  font-size: 19px;
+}
+
+.blogWelcome button:hover {
+  background-color: #6f42c1;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.blogWelcome button:focus {
+  outline: none;
+}
+
+/* Zippy Pricing */
+.zippyPrice h2 {
+  font-weight: bold;
+}
+
+.blogPrice {
+  border-right: 1px solid gray;
+}
+.blogPrice button {
+  background-color: #f0cf0d;
+  width: 50%;
+  outline: none;
+  font-weight: 500;
+  font-size: 19px;
+}
+
+.blogPrice button:hover {
+  background-color: #6f42c1;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.blogPrice button:focus {
+  outline: none;
+}
+
+/* Zippy Team */
+
 .zippyTeamImg img:hover {
   cursor: pointer;
 }
@@ -124,6 +191,8 @@ body {
 .zippyLife h2 {
   font-weight: bold;
 }
+
+/* Zippy slider life */
 .container1 {
   position: relative;
   display: block;
@@ -316,6 +385,16 @@ body {
     margin: 10px 0px 40px 7rem;
     z-index: 10000;
   }
+
+  .blogPrice {
+    border: none;
+  }
+  .blogPrice button {
+    width: 30%;
+  }
+  .blogWelcome button {
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 760px) {
@@ -336,6 +415,9 @@ body {
   .column {
     float: left;
     width: 4rem;
+  }
+  .blogWelcome button {
+    width: 55%;
   }
 }
 
