@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: antiquewhite;
   color: white;
@@ -24,6 +25,37 @@ button {
   background-color: aqua;
   color: black;
 }
+/* loader */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #333;
+  border-bottom: 16px solid #333;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin: 3rem auto;
+  padding: 30px;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /* Card */
 .dataOfUser {
@@ -38,8 +70,41 @@ button {
   border-radius: 12px;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
 .detail {
   background-color: #333;
   margin: 3px;
-  display: grid;
+  display: inline-block;
+  text-align: center;
+  padding: 24px;
+  border-radius: 1rem;
+  box-shadow: 2px 1px 1px 2px #888888;
+}
+
+.head {
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+}
+
+@media screen and (max-width: 999px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 40px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 40px;
+    padding: 20px;
+  }
 }
