@@ -2,9 +2,10 @@ import React, { Fragment, useState } from "react";
 
 const Navbar = () => {
   const [users, setUsers] = useState([]);
+  const [loader, setLoader] = useState(false);
 
   const loadUsers = async () => {
-    // const response = await fetch("https://api.github.com/users");
+    setLoader(true);
     const response = await fetch("https://reqres.in/api/users");
 
     const jsonResponse = await response.json();
@@ -20,21 +21,24 @@ const Navbar = () => {
 
       <h2 style={{ textAlign: "center", color: "black" }}>Users :</h2>
 
-      <div>
-        {/* {console.log(users)} */}
-        {users.map(({ id, email, avatar, last_name, first_name }) => (
-          <div className="detail">
-            <br />
-            <img src={avatar} alt="" srcset="" />
-            <h2>
-              Name: {first_name} {last_name}
-            </h2>
-            <h4>Email : {email}</h4>
-            <br />
-            <br />
-          </div>
-        ))}
-      </div>
+      {loader ? (
+        <div className="container">
+          {users.map(({ id, email, avatar, last_name, first_name }) => (
+            <div className="detail">
+              <br />
+              <img src={avatar} style={{ borderRadius: "50%" }} />
+              <h4 className="head">
+                Name: {first_name} {last_name}
+              </h4>
+              <h5 className="head">Email : {email}</h5>
+              <br />
+              <br />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="loader">{loader}</div>
+      )}
     </Fragment>
   );
 };
